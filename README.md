@@ -2,5 +2,4 @@
 
 # 关于我
 #### 公众号: 子睿闲谈
-
-![](./static/weixin.png "公众号")
+<img src="./static/weixin.png" alt="公众号二维码" width="50%" height="50%" />
