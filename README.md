@@ -3,4 +3,4 @@
 # 关于我
 #### 公众号: 子睿闲谈
 
-![](./static/weixin.jpg "公众号")
+![](./static/weixin.png "公众号")
