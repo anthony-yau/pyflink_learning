@@ -13,22 +13,7 @@ import os
 from pyflink.table import TableEnvironment, EnvironmentSettings, DataTypes, Row
 from pyflink.table.expressions import col
 from pyflink.table.udf import udtaf, TableAggregateFunction
-
-
-# 指定kafka的基础信息
-kafka_servers = "localhost:9092"
-kafka_consumer_group_id = "rank_group1"
-source_topic = "user_action"
-sink_topic = "click_rank"
-sex_count = "sex_count"
-sex_topn = "sex_topn"
-
-# 设置env
-table_env = TableEnvironment.create(EnvironmentSettings.in_streaming_mode())
-
-# 加载Jar
-flink_sql_kafka_jar = os.path.join(os.path.abspath('/mnt/f/venv/flink/jars/'), 'flink-sql-connector-kafka-1.16.2.jar')
-table_env.get_config().set('pipeline.jars', 'file://' + flink_sql_kafka_jar)
+from config import *
 
 
 # 自定义聚合函数
@@ -114,6 +99,6 @@ table_env.execute_sql(
 tab = table_env.from_path("source")
 results = tab \
     .group_by(col('sex'))\
-    .flat_aggregate((col('name'), 10))\
+    .flat_aggregate(TopN(col('name'), 10))\
     .select(col('*'))\
     .execute().print().wait()
