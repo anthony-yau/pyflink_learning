@@ -5,8 +5,26 @@
 - [PyFlink CDC入门篇](https://mp.weixin.qq.com/s?__biz=MzU3Njc2MjAyNg==&mid=2247486985&idx=1&sn=5e7b39d4df1573243e1a7332da964eff&chksm=fd0fb7ccca783eda8b23ca722456485639dc8b344a14968ca113c53937b44d1257d3dc207f7b&scene=178&cur_album_id=1690280491406376964#rd "PyFlink CDC入门篇")
 - [Flink窗口实践(一)](https://mp.weixin.qq.com/s?__biz=MzU3Njc2MjAyNg==&mid=2247487023&idx=1&sn=14b9d62d4c89433e27134371c82f1718&chksm=fd0fb7eaca783efcdce6008a80d348fa969dfec1735d932e44d574a7af0d78a37ee029a52494&scene=178&cur_album_id=1690280491406376964#rd "Flink窗口实践(一)")
 
+## 示例代码
+### 窗口
+**生成数据**
+```shell
+python cpu_usage.py
+```
+**滑动窗口**
+```shell
+flink run \
+-py tumbling_example1.py \
+-p 1 \
+-pyexec ~/venv/flink/bin/python3 \
+-pyclientexec ~/venv/flink/bin/python3
+```
+
+输出结果如：
+
+<img src="./static/tumbling_example1_output.png" alt="滑动窗口输出" width="70%" height="70%"/>
 
 ---
 # 关于我
 #### 公众号: 子睿闲谈
-<img src="./static/weixin.png" alt="公众号二维码" width="50%" height="50%" />
+<img src="./static/weixin.png" alt="公众号二维码" width="30%" height="30%" />
