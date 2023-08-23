@@ -63,7 +63,7 @@ table_env.execute_sql(
 
 tab = table_env.from_path("source")
 #
-# 窗口滚动窗口
+# 滚动窗口
 # 定义窗口大小10秒
 tumbling_windows = Tumble.over(lit(10).seconds)\
     .on(col('ts'))\
