@@ -61,7 +61,7 @@ table_env.execute_sql(
 
 tab = table_env.from_path("source")
 
-# 定义滑动窗口
+# 定义滑动窗口，窗口大小为10分钟，滑动步长为60秒
 sliding_windows = Slide.over(lit(10).minutes)\
     .every(lit(60).seconds)\
     .on(col('ts'))\
