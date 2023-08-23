@@ -11,7 +11,7 @@
 ```shell
 python cpu_usage.py
 ```
-**滑动窗口**
+**滚动窗口**
 ```shell
 flink run \
 -py tumbling_example1.py \
@@ -23,6 +23,19 @@ flink run \
 输出结果如：
 
 <img src="./static/tumbling_example1_output.png" alt="滑动窗口输出" width="70%" height="70%"/>
+
+**滑动窗口**
+```shell
+flink run \
+-py sliding_example1.py \
+-p 1 \
+-pyexec ~/venv/flink/bin/python3 \
+-pyclientexec ~/venv/flink/bin/python3
+```
+
+输出结果如：
+
+<img src="./static/sliding_example1_output.png" alt="滑动窗口输出" width="70%" height="70%"/>
 
 ---
 # 关于我
