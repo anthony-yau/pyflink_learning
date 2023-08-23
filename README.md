@@ -37,6 +37,15 @@ flink run \
 
 <img src="./static/sliding_example1_output.png" alt="滑动窗口输出" width="70%" height="70%"/>
 
+**会话窗口**
+```shell
+flink run \
+-py session_example1.py \
+-p 1 \
+-pyexec ~/venv/flink/bin/python3 \
+-pyclientexec ~/venv/flink/bin/python3
+```
+
 ---
 # 关于我
 #### 公众号: 子睿闲谈
