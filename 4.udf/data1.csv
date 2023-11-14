@@ -1,0 +1,29 @@
+﻿x1,"[
+                    {
+                        ""bs3_name"": ""doris"",
+                        ""bs3_name_id"": 1059679,
+                        ""bs1_name_id"": 1362207,
+                        ""bs2_name_id"": 530175,
+                        ""bs2_name"": ""google"",
+                        ""bs1_name"": ""google""
+                    }
+                ]"
+x2,"[
+                    {
+                        ""bs3_name"": ""zookeeper"",
+                        ""bs3_name_id"": 1059679,
+                        ""bs1_name_id"": 1362207,
+                        ""bs2_name_id"": 530175,
+                        ""bs2_name"": ""qcloud"",
+                        ""bs1_name"": ""qcloud""
+                    },
+                   {
+                        ""bs3_name"": ""redis"",
+                        ""bs3_name_id"": 10000,
+                        ""bs1_name_id"": 20000,
+                        ""bs2_name_id"": 400000,
+                        ""bs2_name"": ""aliyun"",
+                        ""bs1_name"": ""aliyun""
+                    }
+                ]"
+x3,
